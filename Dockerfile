@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     curl
 
 # Étape 3 : Cloner le dépôt Git de ton application
-RUN git clone https://github.com/lyfe00011/whatsapp-bot-md /app/botName
+RUN git clone https://github.com/Faouz995/whatsapp-bot-md /app/botName
 
 # Étape 4 : Définir le répertoire de travail
 WORKDIR /app/botName
@@ -15,24 +15,7 @@ WORKDIR /app/botName
 # Étape 5 : Installer les dépendances avec Yarn
 RUN yarn install --network-concurrency 1
 
-# Étape 6 : Copier le fichier de configuration
-RUN echo "
-PREFIX=.
-STICKER_PACKNAME=LyFE
-ALWAYS_ONLINE=false
-RMBG_KEY=null
-LANGUAG=en
-WARN_LIMIT=3
-FORCE_LOGOUT=false
-BRAINSHOP=159501,6pq8dPiYt7PdqHz3
-MAX_UPLOAD=200
-REJECT_CALL=false
-SUDO=989876543210
-TZ=Asia/Kolkata
-VPS=true
-AUTO_STATUS_VIEW=true
-SEND_READ=true
-AJOIN=true" > config.env
+
 
 # Étape 7 : Exposer le port de ton application (le cas échéant)
 # EXPOSE 3000
