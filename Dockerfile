@@ -16,26 +16,25 @@ WORKDIR /app/botName
 RUN yarn install --network-concurrency 1
 
 # Étape 6 : Copier le fichier de configuration
-RUN echo "
-SESSION = "5_7_807c_d488_712d"
-PREFIX = "."
-STICKER_PACKNAME = "LyFE"
-ALWAYS_ONLINE = "false"
-RMBG_KEY = "null"
-LANGUAG = "fr"
-WARN_LIMIT = "1"
-FORCE_LOGOUT = "false"
-BRAINSHOP = "159501,6pq8dPiYt7PdqHz3"
-MAX_UPLOAD = "200"
-REJECT_CALL = "false"
+RUN echo "SESSION = 5_7_807c_d488_712d
+PREFIX = .
+STICKER_PACKNAME = LyFE
+ALWAYS_ONLINE = false
+RMBG_KEY = null
+LANGUAG = fr
+WARN_LIMIT = 1
+FORCE_LOGOUT = false
+BRAINSHOP = 159501,6pq8dPiYt7PdqHz3
+MAX_UPLOAD = 200
+REJECT_CALL = false
 SUDO = "null"
-TZ = "Africa/Lome"
+TZ = Africa/Lome
 VPS = "true"
-AUTO_STATUS_VIEW = "false"
-SEND_READ = "false"
-AJOIN = "false"
-DATABASE_URL = "postgresql://postgres:ZQFAbERhxLEFwqhk5PfC@containers-us-west-206.railway.app:5470/railway"
-GPT = "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"" > config.env
+AUTO_STATUS_VIEW = false
+SEND_READ = false
+AJOIN = false
+DATABASE_URL = postgresql://postgres:ZQFAbERhxLEFwqhk5PfC@containers-us-west-206.railway.app:5470/railway
+GPT = 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" > config.env
 
 
 
